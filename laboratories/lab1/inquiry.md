@@ -213,3 +213,25 @@ https://devhints.io/makefile
 
 ### 4.  clang compiler
 
+The new makefile is defined as follow :
+
+```
+CXX = clang++
+CXXFLAGS = -std=c++11 -g 
+
+main.out: main.cpp hello.o
+	$(CXX) $(CXXFLAGS) main.cpp hello.o -o main.out
+	
+hello.o: hello.cpp
+	$(CXX) $(CXXFLAGS) -c hello.cpp
+	
+clean:
+	rm -f *.o *.out
+```
+
+### 5.  Assignment an improved world of hello
+
+#### What is the purpose of std::cout, std::cerr, and std::clog, respectively?
+#### How does #include work?
+
+
