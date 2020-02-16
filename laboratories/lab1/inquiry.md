@@ -97,3 +97,17 @@ Guards are   particular constructs used for avoiding multiple inclusion wiht the
 
 ### GIT
 
+
+#### What does git show HEAD~:01/makefile show?
+
+#### What does git show HEAD:01/makefile show?
+
+#### What would git show HEAD~~:01/makefile show?
+
+#### What does the ~ in the previous git show commands mean?
+
+#### Why can you not ommit 01 in the previous commands (i.e. git show HEAD~:makefile instead of git show HEAD~:01/makefile)
+
+#### Sometimes you may need to do a git pull before you can do a git push how can that be?
+
+#### What is the purpose of the .git_ignore file and why should *.o *.out *.exe be in this file when developing C++?
