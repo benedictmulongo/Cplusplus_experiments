@@ -173,11 +173,43 @@ Sometimes there is conflicts that need to be resolved and merged with the curren
 ### 3.  How make works
 
 #### If you invoke touch hello.cpp prior to invoking make, how many files were rebuilt?
+
 ![](https://github.com/benedictmulongo/Cplusplus_experiments/blob/master/laboratories/lab1/IMG_20200216_175006.jpg)
 
+Two files are rebuilded such as hello.o and main.out.
+
 #### Why?
+
+The reason is due to the dependency shown in the figure above.  hello.o and main.out are dependent of hello.cpp; therefore, they do need a rebuild. 
+
 #### Why do you think make checks the modification timestamp of the relevant files as part of deciding what to do?
+
+the last time the file was modified (content has been modified) is a good indication of whether or not the file has have its content modified. 
+
 #### What is the difference between an implicit rule and an explicit rule in a makefile?
+
+Explicit rules tell make which files depend on the compilation of other files, and the commands required to compile a particular file. They take the following form:
+
+targetfile : sourcefiles
+	commands 
+	
+
+Implicit rules are just like explicit rules, except listed without commands. make uses the suffixes on the files to determine what command to perform. For example, the implicit rule:
+
+test.o: test.c io.h
+
+ will cause the following command to be executed:
+
+$(CC) $(CFLAGS) -c test.c io.h
+
+http://pages.cs.wisc.edu/~beechung/ref/Makefiles-short.html
+
 #### What does $* mean inside a makefile?
 
+%.o: %.c
+  $*   # the 'stem' with which an implicit rule matches ("foo" in "foo.c")
+
+https://devhints.io/makefile
+
 ### 4.  clang compiler
+
