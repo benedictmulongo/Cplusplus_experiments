@@ -20,7 +20,7 @@ The manual can be find locally by typing on the terminal the following commands 
 Furthemore, the manual can also be find online for example at  https://linux.die.net/man/1/g++
 
 
-####What is the purpose of -Wall and -g, when passed as arguments to g++?
+#### What is the purpose of -Wall and -g, when passed as arguments to g++?
 
 The purpose of  -Wall is to set all the warnings and print all warning messages.
 On the other hand, -g is used for  generating additional symbolic debuggging information for the  gdb debugger.
@@ -29,7 +29,7 @@ On the other hand, -g is used for  generating additional symbolic debuggging inf
 > gdb ./<executable>
 ```
 
-####How can you store the previous mentioned flags in a variable in the makefile?
+#### How can you store the previous mentioned flags in a variable in the makefile?
 
 The previous flags can be stored in two variables CXX  for g++
 and CXXFLAGS  for  -Wall -g as show at the code snipet below :
