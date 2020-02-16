@@ -173,6 +173,8 @@ Sometimes there is conflicts that need to be resolved and merged with the curren
 ### 3.  How make works
 
 #### If you invoke touch hello.cpp prior to invoking make, how many files were rebuilt?
+![](https://github.com/benedictmulongo/Cplusplus_experiments/blob/master/laboratories/lab1/IMG_20200216_175006.jpg)
+
 #### Why?
 #### Why do you think make checks the modification timestamp of the relevant files as part of deciding what to do?
 #### What is the difference between an implicit rule and an explicit rule in a makefile?
