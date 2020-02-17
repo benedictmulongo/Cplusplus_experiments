@@ -215,7 +215,7 @@ https://devhints.io/makefile
 
 The new makefile is defined as follow :
 
-```
+``` 
 CXX = clang++
 CXXFLAGS = -std=c++11 -g 
 
@@ -269,4 +269,37 @@ void adding_a_decimal(float step) {
 ![](https://github.com/benedictmulongo/Cplusplus_experiments/blob/master/laboratories/lab1/float_double_sizes.png)
 >Float and double size 
 	
-Although 
+As shown in the figure above, float has sufficient memory size to hold a number with 5 zeros. However, after multiple sucessive addition of float number the precision becomes inaccurate; therefore, the precision must be hold by converting float to double. 
+
+
+#### Describe how weird.out is invoked by echo '3.1415' | ./weird.out
+
+The pipe operator is used for sending data from one program to another. 
+(|) Send the output from one program as input to another program.
+
+in bref, the output '3.1415' to the standard in of the ./weird.out program. 
+
+#### Why does not y compare equal to 3.1415?
+
+The floating-poit are imprecise; therefore, the direct equality between two float-point may be incorrect although they both numbers are strictly equal. 
+
+
+#### Is there any difference in behavior if we compare y to 3.1415f, if so; why?
+
+There is a difference, because in this case the comparison is performed between two numbers of same type. Therefore, the comparison is more stable and precise given two numbers of same type - float.  
+
+
+#### Describe and motivate the recommended method to use when trying to determine if two floating-point values are equal.
+
+The recommended method to compare two float-points is to check the magnitude of the difference of the two numbers. If the difference is significantly small, then it may be concluded that the numbers are equal. 
+
+```
+if (|x -y| < 0.00001 ) # x - y can be considered equal
+```
+
+### 7. unit testing
+
+
+### 8.  Will It Float? (temporaries, resource management, valgrind)
+
+### 9.  valgrind a memory management analyzer
