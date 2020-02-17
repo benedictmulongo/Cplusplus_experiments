@@ -234,4 +234,39 @@ clean:
 #### What is the purpose of std::cout, std::cerr, and std::clog, respectively?
 #### How does #include work?
 
+### 6.  Train Spotting (debugging)
 
+#### Why does not powerof return the expected value (16), when invoked with 2 and 4?
+Because the for loop is guarded and conversely do not behaves as it was intendend. 
+we need to change :
+
+from 
+```c++
+  for (int i = 0; i < y; ++i);
+    res = res * x;
+```
+to 
+```c++
+  for (int i = 0; i < y; ++i)
+  {
+    res = res * x;
+  }
+```
+
+#### Why does not adding_a_decimal output 100000?
+
+We convert float to double. As show in the code listing below.
+``` c++
+void adding_a_decimal(float step) {
+  double sum = step;
+  for (int i = 0; i < 1000*1000; ++i) {
+    sum += step;
+  }
+  std::cout << std::setw(4) << sum << std::endl;
+}
+```
+
+![](https://github.com/benedictmulongo/Cplusplus_experiments/blob/master/laboratories/lab1/float_double_sizes.png)
+>Float and double size 
+	
+Although 
